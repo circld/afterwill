@@ -22,9 +22,10 @@ optional arguments:
 ```
 
 ## Features to add
+- [ ] write tests
 - [ ] allow ingest of tasks from file
     - [ ] figure out which format(s) to support
-- browser as UI
+- [ ] browser as UI
     - [ ] local-to-browser intergation
       - [ ] generate temporary HTML file (see test.html + jinja2 docs)
       - [ ] open in default browser (webbrowser.open('file://{full_path_to_html}'))
