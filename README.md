@@ -4,7 +4,7 @@
 ```
 $ python afterwill -h
 usage:
-    $ python main.py  \
+    $ python afterwill  \
     > --task_set 'grocery shop' meditate vacuum  \
     > --task_set jog 'eat lunch' 'work on scala course' 'apply to job'
 
@@ -22,9 +22,10 @@ optional arguments:
 ```
 
 ## Features to add
-- [] allow ingest of tasks from file
-    - [] figure out which format(s) to support
-- [] local-to-browser intergation
-  - [] generate temporary HTML file (see test.html + jinja2 docs)
-  - [] open in default browser (webbrowser.open('file://{full_path_to_html}'))
-- [] wrap in flask app
+- [ ] allow ingest of tasks from file
+    - [ ] figure out which format(s) to support
+- browser as UI
+    - [ ] local-to-browser intergation
+      - [ ] generate temporary HTML file (see test.html + jinja2 docs)
+      - [ ] open in default browser (webbrowser.open('file://{full_path_to_html}'))
+    - [ ] wrap in flask app

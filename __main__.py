@@ -12,7 +12,7 @@ def initialize_parser():
 
     """
     p = ap.ArgumentParser(formatter_class=ap.RawTextHelpFormatter,
-                          usage='''\n    $ python main.py  \\
+                          usage='''\n    $ python afterwill  \\
     > --task_set 'grocery shop' meditate vacuum  \\
     > --task_set jog 'eat lunch' 'work on scala course' 'apply to job'
 
@@ -22,7 +22,7 @@ def initialize_parser():
     After I jog, I will eat lunch
     After I eat lunch, I will work on scala course
     After I work on scala course, I will apply to job''')
-    p.add_argument('--task_set', nargs='+', action='append', metavar='task',
+    p.add_argument('-t', '--task_set', nargs='+', action='append', metavar='task',
                    help='A set of "After I ___, I will ___" tasks. Can define '
                    'multiple task sets comprised of as many tasks as you want.')
     return p
@@ -55,8 +55,8 @@ def print_tasks(tasks, set_sep='\n\n', task_sep='\n'):
 
     """
     print
-    print '\n\n'.join(
-        '\n'.join(t for t in task_set)
+    print set_sep.join(
+        task_sep.join(t for t in task_set)
         for task_set in tasks
     )
 
