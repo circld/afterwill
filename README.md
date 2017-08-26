@@ -22,7 +22,7 @@ optional arguments:
 ```
 
 ## Features to add
-- [ ] write tests
+- [x] write tests
 - [ ] allow ingest of tasks from file
     - [ ] figure out which format(s) to support
 - [ ] browser as UI

@@ -61,14 +61,15 @@ def print_tasks(tasks, set_sep='\n\n', task_sep='\n'):
     )
 
 
-def main():
-
-    parser = initialize_parser()
-    args = parser.parse_args()
+def main(args):
 
     formatted_tasks = format_tasks(args.task_set)
     print_tasks(formatted_tasks)
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+
+    parser = initialize_parser()
+    args = parser.parse_args()
+
+    sys.exit(main(args))
